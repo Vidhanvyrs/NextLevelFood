@@ -8,4 +8,5 @@
 - [x] Connect a database or add a database file using SQLite
 - [x] Output the meals data on Browse Meals
 - [x] Adding loading page
-- [ ] Granualar loading state management
+- [x] Granular loading state management
+- [x] Handling Errors
