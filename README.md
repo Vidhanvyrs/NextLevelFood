@@ -10,3 +10,6 @@
 - [x] Adding loading page
 - [x] Granular loading state management
 - [x] Handling Errors
+- [x] Configuring Meals Detail page + notfound()
+- [x] Configuring Share Meal Form for user uploads
+- [x] Configured pick image input
