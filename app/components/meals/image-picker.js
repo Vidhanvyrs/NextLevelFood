@@ -2,24 +2,28 @@
 import Image from "next/image";
 import classes from "./image-picker.module.css";
 import { useRef, useState } from "react";
+
 export default function ImagePicker({ label, name }) {
   const [pickedImage, setPickedImage] = useState();
   const imageInput = useRef();
   function handlePickClick() {
     imageInput.current.click(); //we initiate the triggering of the click here
   }
+
   function handleImageChange(event) {
     const file = event.target.files[0]; //accessing the first file to get the preview
     if (!file) {
       setPickedImage(null);
       return;
     }
+
     const fileReader = new FileReader();
     fileReader.onload = () => {
       setPickedImage(fileReader.result);
     };
     fileReader.readAsDataURL(file);
   }
+  
   return (
     <div className={classes.picker}>
       <label htmlFor={name}>{label}</label>

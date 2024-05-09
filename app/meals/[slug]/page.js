@@ -5,6 +5,7 @@ import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 export default function MealDetailspage({ params }) {
   //params is automatically given in next
+  console.log(params.slug);
   const meal = getMeal(params.slug);
 
   //what if the meal is not found then an error message should be shown

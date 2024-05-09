@@ -13,3 +13,6 @@
 - [x] Configuring Meals Detail page + notfound()
 - [x] Configuring Share Meal Form for user uploads
 - [x] Configured pick image input
+- [x] Handled Form Submission using server actions
+- [x] Stored the image in a folder and data to the database 
+- [x] redirection add once data is submitted
