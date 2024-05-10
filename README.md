@@ -19,3 +19,4 @@
 - [x] Enhanced UX by using useFormStatus()
 - [x] Adding Server-side input validation
 - [x] using useFormState for keeping the entered userdata
+- [x] fixed the problem of caching caused by next's aggressiveness
