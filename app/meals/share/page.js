@@ -1,9 +1,12 @@
 "use client";
+// import {useFormStatus} from 'react-dom';
 import ImagePicker from "@/app/components/meals/image-picker";
 import classes from "./page.module.css";
 import { shareMeal } from "@/lib/actions";
+import MealsFormSubmit from "@/app/components/meals/meals-form-submit";
 
 export default function SharePage() {
+  // useFormStatus();//instead of using useFormStatus here we will use it somewhere else because we do not want the whole component to be `
   return (
     <>
       <header className={classes.header}>
@@ -43,7 +46,7 @@ export default function SharePage() {
           </p>
           <ImagePicker label="Your image" name="image" />
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <MealsFormSubmit />
           </p>
         </form>
       </main>
