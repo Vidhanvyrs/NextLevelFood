@@ -14,7 +14,8 @@
 - [x] Configuring Share Meal Form for user uploads
 - [x] Configured pick image input
 - [x] Handled Form Submission using server actions
-- [x] Stored the image in a folder and data to the database 
+- [x] Stored the image in a folder and data to the database
 - [x] redirection add once data is submitted
 - [x] Enhanced UX by using useFormStatus()
 - [x] Adding Server-side input validation
+- [x] using useFormState for keeping the entered userdata

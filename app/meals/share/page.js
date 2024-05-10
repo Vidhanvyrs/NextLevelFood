@@ -4,9 +4,12 @@ import ImagePicker from "@/app/components/meals/image-picker";
 import classes from "./page.module.css";
 import { shareMeal } from "@/lib/actions";
 import MealsFormSubmit from "@/app/components/meals/meals-form-submit";
-
+import { useFormState } from "react-dom";
 export default function SharePage() {
   // useFormStatus();//instead of using useFormStatus here we will use it somewhere else because we do not want the whole component to be `
+  const [state, formAction] = useFormState(shareMeal, { message: null });
+  //useformState uses server action which should be triggered and an initial message which is going to be returned
+  //and we basically destructure the state and the formAction which is what we provided to the form as formAciton is basically equal to shareMeal
   return (
     <>
       <header className={classes.header}>
@@ -16,7 +19,7 @@ export default function SharePage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form} action={shareMeal}>
+        <form className={classes.form} action={formAction}>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
@@ -45,6 +48,7 @@ export default function SharePage() {
             ></textarea>
           </p>
           <ImagePicker label="Your image" name="image" />
+          {state.message && <p>{state.message}</p>}
           <p className={classes.actions}>
             <MealsFormSubmit />
           </p>
