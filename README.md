@@ -20,3 +20,4 @@
 - [x] Adding Server-side input validation
 - [x] using useFormState for keeping the entered userdata
 - [x] fixed the problem of caching caused by next's aggressiveness
+- [x] MetaData added and got to know about AWSS3
